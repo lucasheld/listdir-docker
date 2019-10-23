@@ -6,8 +6,5 @@ RUN set -x \
 
 VOLUME [ "/out" ]
 
-# folders to scan separated by semicolon
-ENV FOLDERS=""
-
 COPY entrypoint.sh /
 ENTRYPOINT [ "/entrypoint.sh" ]
