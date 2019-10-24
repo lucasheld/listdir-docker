@@ -31,9 +31,9 @@ $ docker run --rm \
 $ ls ./out
 downloads
 $ cat ./out/downloads
-/mnt/downloads/WhatsApp.apk
-/mnt/downloads/license.dat
-/mnt/downloads/captures/packetcapture.cap
+./WhatsApp.apk
+./license.dat
+./captures/packetcapture.cap
 ```
 
 ## ToDo
