@@ -6,5 +6,10 @@ RUN set -x \
 
 VOLUME [ "/out" ]
 
+ENV UID=1000
+ENV GID=1000
+
+COPY cronjobs /etc/crontabs/root
+COPY listdir.sh /
 COPY entrypoint.sh /
 ENTRYPOINT [ "/entrypoint.sh" ]

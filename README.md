@@ -11,30 +11,24 @@ $ docker build -t listdir-docker .
 ```
 
 ## Usage
+```
+listdir-docker --help    print this help message
+listdir-docker           list directories and exit
+listdir-docker cron      list directories in cron job
+```
+
 ```console
+$ mkdir out
+$ UID=$(id -u)
+$ GID=$(id -g)
 $ docker run --rm \
+  -e UID=${UID} \
+  -e GID=${GID} \
   -v $(pwd)/out:/out \
   -v /home/foo/folder1:/mnt/folder1:ro \
   -v /home/foo/folder2:/mnt/folder2:ro \
   listdir-docker
 ```
 
-## Example
-```console
-$ UID=$(id -u)
-$ GID=$(id -g)
-$ docker run --rm \
-  --user=$UID:$GID \
-  -v $(pwd)/out:/out \
-  -v /home/foo/Downloads:/mnt/downloads:ro \
-  listdir-docker
-$ ls ./out
-downloads
-$ cat ./out/downloads
-./WhatsApp.apk
-./license.dat
-./captures/packetcapture.cap
-```
-
 ## ToDo
-- cron support to update generated files periodically
+- add option to change cron schedule
