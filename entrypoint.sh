@@ -19,6 +19,8 @@ then
         print_help
     elif [ "$1" = "cron" ]
     then
+        sed -i "s/{{CRON_SCHEDULE}}/${CRON_SCHEDULE}/" /etc/crontabs/root
+        echo "run cron with schedule ${CRON_SCHEDULE}"
         crond -f -d 8
     else
         print_help

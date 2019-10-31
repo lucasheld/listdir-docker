@@ -29,6 +29,3 @@ $ docker run --rm \
   -v /home/foo/folder2:/mnt/folder2:ro \
   listdir-docker
 ```
-
-## ToDo
-- add option to change cron schedule
