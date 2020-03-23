@@ -3,6 +3,9 @@ listdir-docker
 
 Docker container that writes directory structures to files.
 
+[![Docker Build](https://img.shields.io/docker/build/lucasheld/listdir-docker.svg)](https://hub.docker.com/r/lucasheld/listdir-docker)
+[![Docker Pulls](https://img.shields.io/docker/pulls/lucasheld/listdir-docker.svg)](https://hub.docker.com/r/lucasheld/listdir-docker)
+
 ## Build
 ```console
 $ git clone https://github.com/lucasheld/listdir-docker
