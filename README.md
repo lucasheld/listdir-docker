@@ -1,10 +1,10 @@
+[![Docker Build](https://img.shields.io/docker/cloud/build/lucasheld/listdir-docker)](https://hub.docker.com/r/lucasheld/listdir-docker)
+[![Docker Image Size](https://img.shields.io/docker/image-size/lucasheld/listdir-docker/latest)](https://hub.docker.com/r/lucasheld/listdir-docker)
+[![Docker Pulls](https://img.shields.io/docker/pulls/lucasheld/listdir-docker)](https://hub.docker.com/r/lucasheld/listdir-docker)
+
 listdir-docker
 ==============
-
 Docker container that writes directory structures to files.
-
-[![Docker Build](https://img.shields.io/docker/build/lucasheld/listdir-docker.svg)](https://hub.docker.com/r/lucasheld/listdir-docker)
-[![Docker Pulls](https://img.shields.io/docker/pulls/lucasheld/listdir-docker.svg)](https://hub.docker.com/r/lucasheld/listdir-docker)
 
 ## Build
 ```console
