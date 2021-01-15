@@ -19,9 +19,7 @@ then
         print_help
     elif [ "$1" = "cron" ]
     then
-        CRONTAB_DIR="/etc/crontabs/root"
-        mkdir -p "${CRONTAB_DIR}"
-        echo "${CRON_SCHEDULE} /listdir.sh > /proc/1/fd/1 2>/proc/1/fd/2" > "${CRONTAB_DIR}/cronjobs"
+        echo "${CRON_SCHEDULE} /listdir.sh > /proc/1/fd/1 2>/proc/1/fd/2" >> "/etc/crontabs/root"
         echo "run cron with schedule ${CRON_SCHEDULE}"
         crond -f -d 8
     else
