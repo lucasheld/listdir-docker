@@ -19,7 +19,9 @@ then
         print_help
     elif [ "$1" = "cron" ]
     then
-        sed -i "s/{{CRON_SCHEDULE}}/${CRON_SCHEDULE}/" /etc/crontabs/root
+        CRONTAB_DIR="/etc/crontabs/root"
+        mkdir -p "${CRONTAB_DIR}"
+        echo "${CRON_SCHEDULE} /listdir.sh > /proc/1/fd/1 2>/proc/1/fd/2" > "${CRONTAB_DIR}/cronjobs"
         echo "run cron with schedule ${CRON_SCHEDULE}"
         crond -f -d 8
     else
